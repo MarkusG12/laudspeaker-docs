@@ -2,3 +2,32 @@
 title: "Twilio Sendgrid"
 sidebarTitle: "Twilio Sendgrid"
 ---
+
+Laudspeaker customers can use their [Twilio SendGrid](https://SendGrid.com) account to send email through Laudspeaker, as well as keep track of email sending metrics like open and click-through rates. 
+
+<Info>SendGrid offers both an SMTP client and a Web API. If you wish to use SendGrid's SMTP client, see our SMTP connection docs [here](/integrate/messaging-channels/email/smtp). For connecting with the SendGrid Web API, follow the guide below.</Info>
+
+## Before We Begin: Creating an account
+Before we can send emails using SendGrid, we must create a Twilio SendGrid account. Go to Twilio SendGrid's [signup page](https://signup.SendGrid.com/new/signup) and fill in the required information.
+
+Twilio SendGrid requires new users to enter a phone number and business website but can be made for free.
+
+<Warning>To send more than 100 emails per a day, you may need to upgrade your SendGrid account to a premium plan.</Warning>
+## Creating API Keys
+
+To begin making your first SendGrid API Key, you must use the [SendGrid App](https://app.sendgrid.com/settings/api_keys). Make sure to [add every API scope to your Admin level API key](https://docs.sendgrid.com/api-reference/how-to-use-the-sendgrid-v3-api/authorization#admin-api-key-scopes) to recieve opened, clicked, and unsubscribed events.
+
+For more help, go to [SendGrid’s Creating API Keys instructions](https://docs.sendgrid.com/api-reference/api-keys/create-api-keys).
+
+## Connecting SendGrid to Laudspeaker
+Now that you are finished setting up your Twilio SendGrid account, it's time to start sending emails!
+
+1. Navigate to the SendGrid API keys page, and copy your Private API key.
+
+2. Go to the [settings menu](https://app.laudspeaker.com/settings) in Laudspeaker, click on the `Email` tab, and then select `SendGrid` and input your API key in the `SendGrid API Key` field:
+
+3. Select the domain that you would like to send emails from using the Domain dropdown, and input the sending name and sending email.
+
+4. Save your settings.
+
+5. Start sending!
